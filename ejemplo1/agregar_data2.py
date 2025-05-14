@@ -1,6 +1,6 @@
 from sqlalchemy.orm import sessionmaker
 import csv
-from crear_base import Saludo
+from crear_base import Saludo2
 from configuracion import engine
 
 with open('data/saludos_mundo.csv', 'r') as f:
@@ -14,11 +14,11 @@ with open('data/saludos_mundo.csv', 'r') as f:
     lista_datos = []
 
     for row in data:
-        saludo2 = row[0].strip()
-        tipo2 = row[1].strip()
-        origen2 = row[2].strip()
+        saludo2 = row[0]
+        tipo2 = row[1]
+        origen2 = row[2]
 
-        miSaludo = Saludo(
+        miSaludo = Saludo2(
             mensaje=saludo2,
             tipo=tipo2,
             origen=origen2
