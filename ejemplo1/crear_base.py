@@ -20,7 +20,7 @@ class Saludo(Base):
     mensaje = Column(String(200))
     tipo = Column(String(200))
 
-    def __str__(self):
+    def __str__(self): # self es un parametro no contado (no se debe enviar) de toda funcion dentro de una clase en python
         return f"{self.id} - {self.mensaje} - {self.tipo}"
 
 

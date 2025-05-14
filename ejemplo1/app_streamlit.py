@@ -8,7 +8,7 @@ Session = sessionmaker(bind=engine)
 session = Session()
 
 # Consultar docentes
-saludos = session.query(Saludo).all()
+saludos = session.query(Saludo).all() # dentro ce parentesis clase involucrada de la cosulta
 
 # Mostrar con Streamlit
 st.title("Presentación de todos los Saludos")
